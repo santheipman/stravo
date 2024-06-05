@@ -26,9 +26,19 @@ func main() {
 
 	user := e.Group("/user")
 
+	// apis:
+	// - user, login
+	// - get feed
+	// - post activity
+
 	user.GET("", getUser, auth)
 	user.POST("", createUser)
 	user.POST("/login", login)
+
+	feed := e.Group("/feed")
+
+	feed.GET("", getFeed)
+	feed.POST("", postFeed)
 
 	e.Logger.Fatal(e.Start(":8000"))
 }
@@ -145,6 +155,14 @@ func createUser(c echo.Context) error {
 	return c.JSON(http.StatusOK, echo.Map{
 		"userId": user.ID.String(),
 	})
+}
+
+func getFeed(c echo.Context) error {
+	return nil
+}
+
+func postFeed(c echo.Context) error {
+	return nil
 }
 
 func hashPassword(password string) (string, error) {
