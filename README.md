@@ -6,7 +6,7 @@ Best way to learn is to actually build things. This is an Strava-like app where 
 
 ### Architecture Overview
 
-![](assets/stravo-overview.png)
+![](stravo-architecture-overview.png)
 
 ### Stack
 - Language: Go, Java
