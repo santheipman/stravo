@@ -10,7 +10,7 @@ Best way to learn is to actually build things. This is an Strava-like app where 
 
 ### Stack
 - Language: Go, Java
-- Web framework: Echo (Go), Spring (Java)
+- Web framework/routers: chi (Go), Spring (Java)
 - Database: PostgreSQL
 - Caching: Redis
 - Message queue: Kafka
